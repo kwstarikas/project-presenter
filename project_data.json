@@ -1,0 +1,44 @@
+[
+    {
+        "model": "projects.project",
+        "pk": 1,
+        "fields": {
+            "name": "p1",
+            "description": "P1 description",
+            "start_date": "2025-03-24",
+            "end_date": null,
+            "technologies": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 2,
+        "fields": {
+            "name": "p2",
+            "description": "P2 description",
+            "start_date": "2025-03-24",
+            "end_date": null,
+            "technologies": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 3,
+        "fields": {
+            "name": "p3",
+            "description": "P3 description",
+            "start_date": "2025-03-24",
+            "end_date": null,
+            "technologies": [
+                1,
+                2,
+                3
+            ]
+        }
+    }
+]

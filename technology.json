@@ -1,0 +1,23 @@
+[
+    {
+        "model": "projects.technology",
+        "pk": 1,
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 2,
+        "fields": {
+            "name": "Java"
+        }
+    },
+    {
+        "model": "projects.technology",
+        "pk": 3,
+        "fields": {
+            "name": "Angular"
+        }
+    }
+]
