@@ -1,11 +1,9 @@
-from django.shortcuts import render
-
 from rest_framework import mixins
-from rest_framework.viewsets import GenericViewSet
-from drf_spectacular.utils import extend_schema_view, extend_schema, OpenApiParameter
-from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.viewsets import GenericViewSet
+from drf_spectacular.utils import extend_schema_view, extend_schema
 
 from .models import Technology, Project
 from .serializers import (
@@ -72,8 +70,8 @@ class TechnologiesViewSet(
 class ProjectViewSet(
     GenericViewSet,
     mixins.ListModelMixin,
-    mixins.CreateModelMixin,
     mixins.UpdateModelMixin,
+    mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
 ):
     http_method_names = ["post", "get", "patch"]
@@ -86,7 +84,6 @@ class ProjectViewSet(
         return ProjectSerializer
 
     def create(self, request, *args, **kwargs):
-        print(request.data)
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()

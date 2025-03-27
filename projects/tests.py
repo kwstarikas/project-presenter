@@ -36,6 +36,4 @@ class TestProjectCreation(APITestCase):
 
     def test_make_project_complete(self):
         response = self.client.patch(f"/project/{self.p1.id}/complete/")
-        print(response)
-        print(response.content)
         self.assertEqual(response.status_code, 200)
